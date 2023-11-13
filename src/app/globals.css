@@ -2,26 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.job-box-shadow {
+  box-shadow: 0 1.0625rem 2.0625rem -0.125rem rgba(28, 39, 49, 0.15);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.centerX-absolute {
+  left: 50%;
+  transform: translateX(-50%) !important;
+}
+
+.centerY-absolute {
+  top: 52%;
+  transform: translateY(-50%) !important;
+}
+
+.center-absolute {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+}
+
+@layer utilities {
+  @variants responsive {
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
+.filter {
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    to top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(42, 42, 71, 0.4) 99%
+  );
+}
+.filter:hover {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(42, 42, 71, 0.5) 99%
+  );
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
+  left: 15px;
+  padding: 0 20px;
+  color: #000 !important;
+  fill: black !important;
+  stroke: black !important;
+  border-radius: 50%;
+}
+.swiper-button-next {
+  transform: translate(5px, 25px);
+}
+.swiper-button-prev {
+  transform: translate(-5px, 25px);
+}
+.swiper-button-prev::after {
+  transform: scale(0.4);
+}
+.swiper-button-next::after {
+  transform: scale(0.4);
 }

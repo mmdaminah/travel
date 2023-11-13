@@ -29,6 +29,7 @@
       { "extensions": [".jsx", ".tsx"] }
     ],
     "no-empty-function": "error",
+    "no-unused-vars": "warn",
     "react/jsx-fragments": "off",
     "react/jsx-handler-names": "off",
     "react/jsx-key": "error",
@@ -91,7 +92,7 @@
     "react/require-default-props": "off",
     "react/require-optimization": "off",
     "react/require-render-return": "error",
-    "react/self-closing-comp": "error",
+    "react/self-closing-comp": "warn",
     "react/sort-comp": "off",
     "react/sort-default-props": "warn",
     "react/sort-prop-types": "off",
@@ -105,14 +106,14 @@
 
     "jsx-a11y/alt-text": "warn",
     "jsx-a11y/anchor-has-content": "error",
-    "jsx-a11y/anchor-is-valid": "error",
+    "jsx-a11y/anchor-is-valid": "warn",
     "jsx-a11y/aria-activedescendant-has-tabindex": "error",
     "jsx-a11y/aria-props": "error",
     "jsx-a11y/aria-proptypes": "error",
     "jsx-a11y/aria-role": "error",
     "jsx-a11y/aria-unsupported-elements": "error",
     "jsx-a11y/autocomplete-valid": "off",
-    "jsx-a11y/click-events-have-key-events": "error",
+    "jsx-a11y/click-events-have-key-events": "warn",
     "jsx-a11y/control-has-associated-label": "off",
     "jsx-a11y/heading-has-content": "error",
     "jsx-a11y/html-has-lang": "error",
@@ -159,6 +160,7 @@
     "@next/next/no-styled-jsx-in-document": "warn",
     "@next/next/no-sync-scripts": "warn",
     "@next/next/no-title-in-document-head": "warn",
-    "@next/next/no-unwanted-polyfillio": "warn"
+    "@next/next/no-unwanted-polyfillio": "warn",
+    "jsx-quotes": "warn"
   }
 }
